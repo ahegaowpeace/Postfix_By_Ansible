@@ -1,0 +1,19 @@
+- name: Install epel-release, Ansible, telnet
+  yum:
+    name: "{{ item.name }}"
+    state: ""{{ item.state }}"
+  with_items:
+      - { name: 'epel-release', state: 'latest' }
+      - { name: 'postfix', state: 'latest' }
+      - { name: 'telnet', state: 'latest' }
+
+- name: Copy Postfix Config Files
+  template:
+    src: /etc/ansible/roles/postfix-server/files/main.j2
+    dest: /etc/postfix/main.cf
+
+-name: Start Postfix
+  systemd:
+    name: postfix
+    state: started
+    enabled: yes

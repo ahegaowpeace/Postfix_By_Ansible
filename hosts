@@ -1,0 +1,6 @@
+[postfix-server]
+localhost
+
+[postfix-server:vars]
+myhostname=【ホスト名】
+mydomain=【ドメイン名】

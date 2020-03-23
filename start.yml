@@ -1,0 +1,4 @@
+- hosts: postfix-server
+  connection: local
+  roles:
+    - postfix-server
