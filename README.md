@@ -7,4 +7,5 @@
 - SELinux/SG設定
 - スタート
   - `cd /etc/ansible`
+  - `sudo cp -r * /etc/ansible/`
   - `ansible -i hosts start.yml`
