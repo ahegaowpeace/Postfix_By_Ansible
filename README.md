@@ -8,4 +8,4 @@
 - スタート
   - `cd /etc/ansible`
   - `sudo cp -r * /etc/ansible/`
-  - `ansible -i hosts start.yml`
+  - `ansible-playbook -i hosts start.yml`
