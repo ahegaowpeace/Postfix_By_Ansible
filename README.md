@@ -5,4 +5,6 @@
   - `yum -y update ansible`
 - インベントリファイルでホスト名とドメイン名を変更
 - SELinux/SG設定
-- リスタート
+- スタート
+  - `cd /etc/ansible`
+  - `ansible -i hosts start.yml`
