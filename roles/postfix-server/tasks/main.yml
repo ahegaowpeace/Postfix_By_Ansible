@@ -12,7 +12,7 @@
     src: /etc/ansible/roles/postfix-server/files/main.j2
     dest: /etc/postfix/main.cf
 
--name: Start Postfix
+- name: Start Postfix
   systemd:
     name: postfix
     state: started
